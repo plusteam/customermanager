@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhiteP"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layHeader"
+        layout="@layout/item_file_header_u"></include>
+
+    <include
+        android:id="@+id/lvSheets"
+        layout="@layout/item_file_list_u"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layHeader"
+        android:dividerHeight="1dp"></include>
+
+    <include
+        android:id="@+id/layFooter"
+        layout="@layout/item_file_footer_u"></include>
+
+</RelativeLayout>
