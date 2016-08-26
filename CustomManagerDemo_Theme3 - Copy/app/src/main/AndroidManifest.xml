@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.le.custommanagerdemo_theme">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".model.Application"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_app_smallsize"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.Activity_Login"></activity>
+
+        <activity
+            android:name=".activity.UserActivity"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
+        <activity android:name=".ui.ACustomer"/>
+        <activity android:name=".ui.CustomerActivity"/>
+        <activity android:name=".ui.FileChooserActivityU" />
+        <activity android:name=".ui.SheetChooserActivityU" />
+        <activity android:name=".ui.RowChooserActivityU" />
+        <activity android:name=".ui.MergeColumnsActivityU" />
+        <activity android:name=".ui.CustomersManagerActivityU"/>
+    </application>
+
+</manifest>
