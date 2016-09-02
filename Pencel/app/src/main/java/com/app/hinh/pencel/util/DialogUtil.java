@@ -3,7 +3,7 @@ package com.app.hinh.pencel.util;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.Window;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,9 +19,9 @@ import java.util.ArrayList;
  */
 public class DialogUtil {
     private Dialog dialog;
-    private ImageButton btnCancel;
-    private ImageButton btnNext;
-    private ImageButton btnBack;
+    private Button btnCancel;
+    private Button btnNext;
+    private Button btnBack;
     private Context context;
     private ImageView imvHeaderIcon;
     private TextView txtHeaderTitle;
@@ -36,9 +36,9 @@ public class DialogUtil {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_custom);
         imvHeaderIcon = (ImageView) dialog.findViewById(R.id.imvHeaderIcon);
-        btnNext = (ImageButton) dialog.findViewById(R.id.btnNext);
-        btnCancel = (ImageButton) dialog.findViewById(R.id.btnCancel);
-        btnBack = (ImageButton) dialog.findViewById(R.id.btnBack);
+        btnNext = (Button) dialog.findViewById(R.id.btnNext);
+        btnCancel = (Button) dialog.findViewById(R.id.btnCancel);
+        btnBack = (Button) dialog.findViewById(R.id.btnBack);
         txtHeaderTitle = (TextView) dialog.findViewById(R.id.txtHeaderTitle);
         txtHeaderInfo = (TextView) dialog.findViewById(R.id.txtHeaderInfo);
 
@@ -62,27 +62,27 @@ public class DialogUtil {
         this.dialog = dialog;
     }
 
-    public ImageButton getBtnCancel() {
+    public Button getBtnCancel() {
         return btnCancel;
     }
 
-    public void setBtnCancel(ImageButton btnCancel) {
+    public void setBtnCancel(Button btnCancel) {
         this.btnCancel = btnCancel;
     }
 
-    public ImageButton getBtnNext() {
+    public Button getBtnNext() {
         return btnNext;
     }
 
-    public void setBtnNext(ImageButton btnNext) {
+    public void setBtnNext(Button btnNext) {
         this.btnNext = btnNext;
     }
 
-    public ImageButton getBtnBack() {
+    public Button getBtnBack() {
         return btnBack;
     }
 
-    public void setBtnBack(ImageButton btnBack) {
+    public void setBtnBack(Button btnBack) {
         this.btnBack = btnBack;
     }
 

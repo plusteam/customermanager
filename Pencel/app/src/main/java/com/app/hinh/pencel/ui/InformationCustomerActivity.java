@@ -28,7 +28,7 @@ public class InformationCustomerActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.item_cus);
+        setContentView(R.layout.activity_cus);
 
         cusId = (TextView)findViewById(R.id.vId);
         tvCus = (TextView)findViewById(R.id.vName);

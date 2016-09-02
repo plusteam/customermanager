@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,9 +24,9 @@ public class SheetChooserActivity extends AppCompatActivity implements View.OnCl
     private CustomListviewAdapter adapter;
     private TextView txtHeaderName;
     private TextView txtHeaderInfo;
-    private ImageButton btnNext;
-    private ImageButton btnCancel;
-    private ImageButton btnBack;
+    private Button btnNext;
+    private Button btnCancel;
+    private Button btnBack;
     private int indexOfSheet;
     private String filePath;
 
@@ -38,10 +38,10 @@ public class SheetChooserActivity extends AppCompatActivity implements View.OnCl
         txtHeaderName = (TextView) findViewById(R.id.txtHeaderTitle);
         txtHeaderInfo = (TextView) findViewById(R.id.txtHeaderInfo);
 
-        btnNext = (ImageButton) findViewById(R.id.btnNext);
+        btnNext = (Button) findViewById(R.id.btnNext);
         btnNext.setEnabled(false);
-        btnCancel = (ImageButton) findViewById(R.id.btnCancel);
-        btnBack = (ImageButton) findViewById(R.id.btnBack);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
+        btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setEnabled(true);
         btnCancel.setVisibility(View.GONE);
 

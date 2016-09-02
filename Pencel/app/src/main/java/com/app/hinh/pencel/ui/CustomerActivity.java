@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.app.hinh.pencel.R;
 import com.app.hinh.pencel.adapter.CustomListviewAdapter;
+import com.app.hinh.pencel.adapter.CustomerSectionAdapter;
 import com.app.hinh.pencel.model.CustomListview;
 import com.app.hinh.pencel.model.Customer;
 import com.app.hinh.pencel.model.CustomerResponse;
@@ -27,10 +28,11 @@ import retrofit2.Response;
  * Created by Dung-DamDe-DeTien on 13/08/2016.
  */
 public class CustomerActivity extends Activity {
-    private CustomListviewAdapter adapter;
+    private CustomerSectionAdapter adapter;
     private ListView lvCus;
     private ArrayList<Customer> customers;
     private ArrayList<CustomListview> cus;
+    private ArrayList<String> custom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +47,14 @@ public class CustomerActivity extends Activity {
         CustomerAPI.sendCustomer("aaaa");*/
 
         cus = new ArrayList<>();
+        custom = new ArrayList<>();
         customers = new ArrayList<>();
         lvCus = (ListView)findViewById(R.id.lvCustomer);
-        adapter = new CustomListviewAdapter(this, R.layout.item_custom_list_item,cus);
+        adapter = new CustomerSectionAdapter(this, custom);
         lvCus.setAdapter(adapter);
-        /*Final fina=new Final();
-        Log.d("id_aaaa",String.valueOf(fina.getId()));*/
+        SideBar sideBar = (SideBar)findViewById(R.id.sideBar);
+        sideBar.setListView(lvCus);
+
         Intent intent = getIntent();
         Bundle extra = intent.getExtras();
         int id = extra.getInt("id");
@@ -116,6 +120,7 @@ public class CustomerActivity extends Activity {
         this.customers.addAll(customer1);
         for (int i = 0; i < customers.size(); i ++){
             cus.add(new CustomListview(this.customers.get(i).getName().toString(), "", false, null, 0));
+            custom.add(this.customers.get(i).getName().toString());
         }
         adapter.notifyDataSetChanged();
     }

@@ -15,7 +15,7 @@ import java.util.Random;
 /**
  * Created by hinh1 on 9/1/2016.
  */
-public class NotificationActivity extends AppCompatActivity{
+public class NotificationActivity extends AppCompatActivity {
     private CustomCalendar customCalendar;
 
     @Override

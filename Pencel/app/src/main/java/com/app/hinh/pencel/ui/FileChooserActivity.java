@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,9 +20,9 @@ import java.io.File;
 
 public class FileChooserActivity extends AppCompatActivity implements View.OnClickListener {
     private String filePath;
-    private ImageButton btnCancel;
-    private ImageButton btnNext;
-    private ImageButton btnBack;
+    private Button btnCancel;
+    private Button btnNext;
+    private Button btnBack;
     private Button btnShowDialog;
     private TextView txtHeaderTitle;
     private TextView txtHeaderInfo;
@@ -40,11 +40,11 @@ public class FileChooserActivity extends AppCompatActivity implements View.OnCli
         txtHeaderTitle.setText("Bước đầu tiên:");
         txtHeaderInfo.setText("Hãy chọn file Excel của bạn");
 
-        btnNext = (ImageButton) findViewById(R.id.btnNext);
+        btnNext = (Button) findViewById(R.id.btnNext);
         btnNext.setEnabled(false);
         btnShowDialog = (Button) findViewById(R.id.btnShowDialog);
-        btnCancel = (ImageButton) findViewById(R.id.btnCancel);
-        btnBack = (ImageButton) findViewById(R.id.btnBack);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
+        btnBack = (Button) findViewById(R.id.btnBack);
 
         btnBack.setVisibility(View.GONE);
         btnShowDialog.setOnClickListener(this);

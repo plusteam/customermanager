@@ -1,12 +1,78 @@
 package com.app.hinh.pencel.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Henry on 05-Aug-16.
  */
 public class Customer {
 
-    private String customerID = "";
+//    private String customerID = "";
 
+    @SerializedName("cong_ty")
+    @Expose
+    private String company;
+
+    @SerializedName("customer_type")
+    @Expose
+    private String customerType;
+
+    @SerializedName("danh_gia")
+    @Expose
+    private String rating;
+
+    @SerializedName("dia_chi")
+    @Expose
+    private String address;
+
+    @SerializedName("duan_qt")
+    @Expose
+    private String project;
+
+    @SerializedName("email")
+    @Expose
+    private String email;
+
+    @SerializedName("ghi_chu")
+    @Expose
+    private String note;
+
+    @SerializedName("ho_va_ten")
+    @Expose
+    private String name;
+
+    @SerializedName("id_account")
+    @Expose
+    private String accountID;
+
+    @SerializedName("id_customer")
+    @Expose
+    private String customerID ;
+
+    @SerializedName("lh_dau")
+    @Expose
+    private String firstContact;
+
+    @SerializedName("lh_tiep")
+    @Expose
+    private String nextContact;
+
+    @SerializedName("nguon_khach")
+    @Expose
+    private String agency;
+
+    @SerializedName("nhu_cau")
+    @Expose
+    private String demand;
+
+    @SerializedName("other")
+    @Expose
+    private String other;
+
+    @SerializedName("sdt")
+    @Expose
+    private String phoneNumber;
     public String getCustomerID() {
         return customerID;
     }
@@ -15,21 +81,21 @@ public class Customer {
         this.customerID = customerID;
     }
 
-    private String accountID = "";
-    private String name = "";
-    private String phoneNumber = "";
-    private String address = "";
-    private String company = "";
-    private String project = "";
-    private String email = "";
-    private String firstContact = "";
-    private String nextContact = "";
-    private String rating = "";
-    private String customerType = "";
-    private String demand = "";
-    private String agency = "";
-    private String note = "";
-    private String other = "";
+//    private String accountID = "";
+//    private String name = "";
+//    private String phoneNumber = "";
+//    private String address = "";
+//    private String company = "";
+//    private String project = "";
+//    private String email = "";
+//    private String firstContact = "";
+//    private String nextContact = "";
+//    private String rating = "";
+//    private String customerType = "";
+//    private String demand = "";
+//    private String agency = "";
+//    private String note = "";
+//    private String other = "";
 
 
     public Customer() {

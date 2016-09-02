@@ -37,7 +37,6 @@
         <activity android:name=".ui.SheetChooserActivity"/>
         <activity android:name=".ui.NotificationActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
-
     </application>
 
 </manifest>

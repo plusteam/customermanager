@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,9 +23,9 @@ public class RowChooserActivity extends AppCompatActivity implements View.OnClic
     private int indexOfSheet;
     private ListView lvRows;
     private TextView txtHeaderName;
-    private ImageButton btnNext;
-    private ImageButton btnCancel;
-    private ImageButton btnBack;
+    private Button btnNext;
+    private Button btnCancel;
+    private Button btnBack;
     private TextView txtHeaderInfo;
     private CustomListviewAdapter adapter;
     private ArrayList<CustomListview> arrRows;
@@ -36,11 +36,11 @@ public class RowChooserActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_row_chooser);
 
-        btnNext = (ImageButton) findViewById(R.id.btnNext);
+        btnNext = (Button) findViewById(R.id.btnNext);
         btnNext.setEnabled(false);
-        btnCancel = (ImageButton) findViewById(R.id.btnCancel);
+        btnCancel = (Button) findViewById(R.id.btnCancel);
         btnCancel.setVisibility(View.GONE);
-        btnBack = (ImageButton) findViewById(R.id.btnBack);
+        btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setEnabled(true);
         txtHeaderName = (TextView) findViewById(R.id.txtHeaderTitle);
         txtHeaderInfo = (TextView) findViewById(R.id.txtHeaderInfo);
