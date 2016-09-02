@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhiteP"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layHeader"
+        layout="@layout/item_file_header_u"></include>
+
+    <TextView
+        android:id="@+id/txtChooseFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layHeader"
+        android:layout_marginTop="90dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:background="@drawable/button_magic"
+        android:id="@+id/btnShowDialog"
+        android:textColor="@color/colorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtChooseFile"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Chọn file" />
+
+    <include
+        android:id="@+id/layFooter"
+        layout="@layout/item_file_footer_u"></include>
+
+
+</RelativeLayout>
