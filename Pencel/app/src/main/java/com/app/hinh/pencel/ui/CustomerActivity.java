@@ -3,12 +3,12 @@ package com.app.hinh.pencel.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.app.hinh.pencel.R;
-import com.app.hinh.pencel.adapter.CustomListviewAdapter;
 import com.app.hinh.pencel.adapter.CustomerSectionAdapter;
 import com.app.hinh.pencel.model.CustomListview;
 import com.app.hinh.pencel.model.Customer;
@@ -40,7 +40,7 @@ public class CustomerActivity extends Activity {
         setContentView(R.layout.customer);
 
        /* if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.ThreadPoli   cy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
 
@@ -63,8 +63,10 @@ public class CustomerActivity extends Activity {
         lvCus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
                 ArrayList<Customer> dt = customers;
-                String id = dt.get(i).getAccountID();
+                String id = dt.get(i).getCustomerID();
+                Log.d("ID",id );
                 String cusName = dt.get(i).getName();
                 String phone = dt.get(i).getPhoneNumber();
                 String address = dt.get(i).getAddress();

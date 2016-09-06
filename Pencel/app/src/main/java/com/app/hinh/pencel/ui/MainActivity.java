@@ -31,7 +31,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.hinh.pencel.R;
-import com.app.hinh.pencel.common.Final;
 import com.app.hinh.pencel.database.DatabaseManager;
 import com.app.hinh.pencel.model.Account;
 import com.app.hinh.pencel.model.AccountResponse;
@@ -68,10 +67,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private LinearLayout llProfileLayout;
     private String email;
     private int idAccount=0;
-
+    private NoteActivity noteAc = new NoteActivity();
     private Cursor cursor;//bang du lieu
     private DatabaseManager databaseManager;//lop lam viec voi DB
-    private Final fina = new Final();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,6 +115,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         imgProfilePic = (ImageView) header.findViewById(R.id.imageAvataGoogle);
         txtName = (TextView) header.findViewById(R.id.tvNameUserGoogle);
         txtEmail = (TextView) header.findViewById(R.id.tvEmailGoogle);
+        databaseManager =new DatabaseManager(MainActivity.this);
+
 
     }
 
@@ -220,6 +220,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         updateUI(true);
         email =  Plus.AccountApi.getAccountName(mGoogleApiClient);
         getAccount(email);
+
     }
 
     @Override
@@ -430,26 +431,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void bindata(List<Account> account){
         this.idAccount=account.get(0).getId();
 
-        fina.setId(this.idAccount);
-        databaseManager =new DatabaseManager(MainActivity.this);
         databaseManager.insert(this.idAccount);
         cursor= databaseManager.getList();
         cursor.moveToFirst();
-        Log.d("id",String.valueOf(cursor.getInt(0)));
+        Log.d("FUCK",String.valueOf(cursor.getInt(0)));
+
+        noteAc.getCustomers(idAccount);
+        Log.d("FUCK", String.valueOf(idAccount));
 
     }
 
     public void openCustomer(View view){
         Intent intent = new Intent(this, CustomerActivity.class);
-        intent.putExtra("id", this.idAccount);
+        cursor= databaseManager.getList();
+        cursor.moveToFirst();
+        intent.putExtra("id", cursor.getInt(0));
         startActivity(intent);
     }
     public void openNotification(View view){
         Intent intent = new Intent(this, NotificationActivity.class);
+        cursor= databaseManager.getList();
+        cursor.moveToFirst();
+        intent.putExtra("id", cursor.getInt(0));
+
         startActivity(intent);
     }
     public int getIdAccount() {
         return idAccount;
+    }
+
+    public void setIdAccount(int idAccount) {
+        this.idAccount = idAccount;
     }
 
     public void  toCustomer(View view){

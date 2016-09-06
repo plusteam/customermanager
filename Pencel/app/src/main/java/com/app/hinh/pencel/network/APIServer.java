@@ -2,6 +2,7 @@ package com.app.hinh.pencel.network;
 
 import com.app.hinh.pencel.model.AccountResponse;
 import com.app.hinh.pencel.model.CustomerResponse;
+import com.app.hinh.pencel.model.NoteResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -25,7 +26,7 @@ public interface APIServer {
     Call<String> send(@Body String account);
     //customer
     @GET("customersmanager/{id}/")
-    Call<CustomerResponse> getCurtomers(@Path("id") int accountId);
+    Call<CustomerResponse> getCurtomers(@Path("id") String accountId);
 
 
     @Headers({"Content-Type: text/plain"
@@ -33,6 +34,7 @@ public interface APIServer {
     )
     @POST("create/customer/")
     Call<String> sendCustomer(@Body String account);
-
+    @GET("notification/{id}/")
+    Call<NoteResponse> getNote(@Path("id") String id );
 
 }

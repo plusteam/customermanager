@@ -13,7 +13,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
  */
 public class Application extends MultiDexApplication {
     public static Retrofit mRetrofit;
-    public static final String BASE_API = "http://9c43352d.ngrok.io/";
+    public static final String BASE_API = "http://557cd663.ngrok.io/";
     public static APIServer APIServer;
 
 

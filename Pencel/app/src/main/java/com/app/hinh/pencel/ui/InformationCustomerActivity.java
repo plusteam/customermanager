@@ -46,7 +46,7 @@ public class InformationCustomerActivity extends Activity {
 
         Intent intent = getIntent();
         Bundle extra = intent.getExtras();
-        int a = extra.getInt("id");
+        String a = extra.getString("id");
         String name = extra.getString("cusName");
         String phone = extra.getString("phone");
         String address = extra.getString("address");
@@ -60,7 +60,7 @@ public class InformationCustomerActivity extends Activity {
         String need = extra.getString("need");
         String er = extra.getString("Other");
 
-        cusId.setText(String.valueOf(a));
+        cusId.setText(a);
         tvCus.setText(name);
         tvPhone.setText(phone);
         tvAddress.setText(address);

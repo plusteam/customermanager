@@ -7,14 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Dung-DamDe-DeTien on 13/08/2016.
+ * Created by hinh1 on 9/5/2016.
  */
-public class AccountResponse {
+public class NoteResponse  {
     @SerializedName("data")
     @Expose
-    private List<Account> data = new ArrayList<Account>();
-
-   // private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private List<CustomerNotification> data = new ArrayList<CustomerNotification>();
 
     /**
      *
@@ -22,7 +20,7 @@ public class AccountResponse {
      *     The data
      */
 
-    public List<Account> getData() {
+    public List<CustomerNotification> getData() {
         return data;
     }
 
@@ -33,10 +31,7 @@ public class AccountResponse {
      *     The data
      */
 
-    public void setData(List<Account> data) {
+    public void setData(List<CustomerNotification> data) {
         this.data = data;
     }
-
-
-}
-
+ }

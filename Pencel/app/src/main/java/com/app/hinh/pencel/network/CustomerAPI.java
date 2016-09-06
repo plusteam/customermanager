@@ -16,7 +16,7 @@ import retrofit2.Response;
  */
 public class CustomerAPI {
     public static void getCustomer(Callback<CustomerResponse> callback, int id) {
-        Call<CustomerResponse> callGetCus = Application.APIServer.getCurtomers(id);
+        Call<CustomerResponse> callGetCus = Application.APIServer.getCurtomers(String.valueOf(id));
         callGetCus.enqueue(callback);
     }
 

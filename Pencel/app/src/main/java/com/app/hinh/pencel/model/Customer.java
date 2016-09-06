@@ -10,72 +10,70 @@ public class Customer {
 
 //    private String customerID = "";
 
-    @SerializedName("cong_ty")
+    @SerializedName("company")
     @Expose
-    private String company;
+    private String company="";
 
-    @SerializedName("customer_type")
+    @SerializedName("customerType")
     @Expose
-    private String customerType;
+    private String customerType="";
 
-    @SerializedName("danh_gia")
+    @SerializedName("rating")
     @Expose
-    private String rating;
+    private String rating="";
 
-    @SerializedName("dia_chi")
+    @SerializedName("address")
     @Expose
-    private String address;
+    private String address="";
 
-    @SerializedName("duan_qt")
+    @SerializedName("project")
     @Expose
-    private String project;
+    private String project="";
 
     @SerializedName("email")
     @Expose
-    private String email;
+    private String email="";
 
-    @SerializedName("ghi_chu")
+    @SerializedName("note")
     @Expose
-    private String note;
+    private String note="";
 
-    @SerializedName("ho_va_ten")
+    @SerializedName("name")
     @Expose
-    private String name;
+    private String name="";
 
-    @SerializedName("id_account")
+    @SerializedName("accountID")
     @Expose
-    private String accountID;
+    private String accountID="";
 
     @SerializedName("id_customer")
     @Expose
-    private String customerID ;
+    private String customerID="" ;
 
-    @SerializedName("lh_dau")
+    @SerializedName("firstContact")
     @Expose
-    private String firstContact;
+    private String firstContact="";
 
-    @SerializedName("lh_tiep")
+    @SerializedName("nextContact")
     @Expose
-    private String nextContact;
+    private String nextContact="";
 
-    @SerializedName("nguon_khach")
+    @SerializedName("agency")
     @Expose
-    private String agency;
+    private String agency="";
 
-    @SerializedName("nhu_cau")
+    @SerializedName("demand")
     @Expose
-    private String demand;
+    private String demand="";
 
     @SerializedName("other")
     @Expose
-    private String other;
+    private String other="";
 
-    @SerializedName("sdt")
+    @SerializedName("phoneNumber")
     @Expose
-    private String phoneNumber;
-    public String getCustomerID() {
-        return customerID;
-    }
+    private String phoneNumber="";
+
 
     public void setCustomerID(String customerID) {
         this.customerID = customerID;
@@ -100,6 +98,10 @@ public class Customer {
 
     public Customer() {
 
+    }
+
+    public String getCustomerID() {
+        return customerID;
     }
 
     public String getAccountID() {
